@@ -1,13 +1,18 @@
 function updateInventory(arr1, arr2) {
-    for(element2 of arr2){
-        for(element1 of arr1){
-            if(element2[1]==element1[1]){
-                element1[0] += element2[0];
-            }
-        }
-    }
-    console.log(arr1);
+    let itemName1 = obtainNames(arr1);
+    let itemName2 = obtainNames(arr2);
+
+    console.log(itemName1);
+    console.log(itemName2);
     return arr1;
+}
+
+function obtainNames(arr){
+    let itemName = [];
+    for(elements of arr){
+        itemName.push(elements[1]);
+    }
+    return itemName;
 }
 
 // Example inventory lists
@@ -19,10 +24,10 @@ var curInv = [
 ];
 
 var newInv = [
-    [2, "Hair Pin"],
     [3, "Half-Eaten Apple"],
     [67, "Bowling Ball"],
-    [7, "Toothpaste"]
+    [7, "Toothpaste"],
+    [2, "Hair Pin"]
 ];
 
 updateInventory(curInv, newInv);
