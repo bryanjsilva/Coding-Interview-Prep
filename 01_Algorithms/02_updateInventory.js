@@ -17,8 +17,12 @@ function updateInventory(arr1, arr2) {
         arr1[index1[i]][0] += arr2[index2[i]][0];
     }
 
-    console.log(arr1);
-    console.log(index2);
+    for(element of arr2){
+        if(!index2.includes(arr2.indexOf(element))){
+            arr1.push(element);
+        }
+    }
+
     return arr1;
 }
 
