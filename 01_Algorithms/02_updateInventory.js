@@ -17,18 +17,19 @@ function updateInventory(arr1, arr2) {
         arr1[index1[i]][0] += arr2[index2[i]][0];
     }
 
-    for(element of arr2){
+    for(let element of arr2){
         if(!index2.includes(arr2.indexOf(element))){
             arr1.push(element);
         }
     }
 
+    console.log(arr1);
     return arr1;
 }
 
 function obtainNames(arr){
     let itemName = [];
-    for(elements of arr){
+    for(let elements of arr){
         itemName.push(elements[1]);
     }
     return itemName;
@@ -36,17 +37,20 @@ function obtainNames(arr){
 
 // Example inventory lists
 var curInv = [
-    [21, "Bowling Ball"],
-    [2, "Dirty Sock"],
-    [1, "Hair Pin"],
-    [5, "Microphone"]
+    [0, "Bowling Ball"], 
+    [0, "Dirty Sock"], 
+    [0, "Hair Pin"], 
+    [0, "Microphone"]
 ];
 
 var newInv = [
-    [3, "Half-Eaten Apple"],
-    [67, "Bowling Ball"],
-    [7, "Toothpaste"],
-    [2, "Hair Pin"]
+    [1, "Hair Pin"], 
+    [1, "Half-Eaten Apple"], 
+    [1, "Bowling Ball"], 
+    [1, "Toothpaste"]
 ];
 
 updateInventory(curInv, newInv);
+
+
+
