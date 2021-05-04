@@ -23,6 +23,7 @@ function updateInventory(arr1, arr2) {
         }
     }
 
+    arr1.sort(([a, b], [c, d]) => b > d ? 1 : -1);
     console.log(arr1);
     return arr1;
 }
